@@ -4,9 +4,10 @@ import os
 
 # CONFIG
 st.set_page_config(page_title="Groq Role-Based Chat", page_icon="🤖")
+api_key = st.secrets.get("GROQ_API_KEY")
 
 client = Groq(
-    api_key=os.environ.get("GROQ_API_KEY"),
+    api_key=api_key,
 )
 
 # ROLES
